@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-rpg: "VT323", monospace;
+
+  --color-rpg-bg: #1a1c23;
+  --color-rpg-border: #d4d4aa;
+  --color-rpg-panel: #2b2d35;
+  --color-rpg-text: #e8e8e8;
+  --color-rpg-accent: #ffb800; /* Gold */
+  --color-rpg-health: #e63946;
+  --color-rpg-mana: #457b9d;
+  --color-rpg-xp: #2a9d8f;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-rpg-bg);
+  color: var(--color-rpg-text);
+}
+
+.rpg-panel {
+  background-color: var(--color-rpg-panel);
+  border: 4px solid var(--color-rpg-border);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+}
+
+.rpg-panel-inset {
+  background-color: #1a1c23;
+  border: 4px solid var(--color-rpg-border);
+  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.rpg-btn {
+  background-color: var(--color-rpg-panel);
+  border: 4px solid var(--color-rpg-border);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+  font-family: var(--font-rpg);
+  text-transform: uppercase;
+  transition: all 0.1s;
+}
+
+.rpg-btn:hover {
+  background-color: #3b3f4a;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+}
+
+.rpg-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  font-family: var(--font-rpg);
+  color: var(--color-rpg-accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body h1 { font-size: 2rem; }
+.markdown-body h2 { font-size: 1.5rem; }
+.markdown-body h3 { font-size: 1.25rem; }
+.markdown-body p { margin-bottom: 1rem; line-height: 1.6; }
+.markdown-body ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
+.markdown-body ol { list-style-type: decimal; margin-left: 1.5rem; margin-bottom: 1rem; }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
